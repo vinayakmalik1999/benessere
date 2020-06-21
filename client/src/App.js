@@ -32,7 +32,7 @@ class App extends Component {
       URL:this.state.formValue
     }).then(res => {
       console.log(res)
-      this.setState({formValue:''})
+      this.setState({formValue:''}) 
     })
     .catch(err => {
       alert(err)
@@ -54,7 +54,7 @@ class App extends Component {
         <InputGroup.Prepend>
         <InputGroup.Text>Enter your URL</InputGroup.Text>
         </InputGroup.Prepend>
-        <FormControl as="textarea" aria-label="With textarea" value={this.state.formValue} onChange={this.handleChange}/>
+        <FormControl type = 'text'placeholder="Enter URL" aria-label="With textarea" value={this.state.formValue} onChange={this.handleChange}/>
         <InputGroup.Append>
        <Button type='submit' variant="outline-dark" >Submit</Button>
    </InputGroup.Append>
